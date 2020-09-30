@@ -1,0 +1,26 @@
+header(class="container-fluid ")
+  div(class="container header")
+    div(class="logo")
+      a(href='/')  
+    input(type="text" class="form-control col-md-6 col-3" placeholder="Search") 
+    if(user)
+      div(class="headerInfo")
+        a(href='/') 首页
+        |
+        |
+        a(href='/') #{user.name}
+        |
+        |
+        a(href='/') 设置
+        |
+        |
+        a(href='/logout') 登出
+    else
+      div(class="headerInfo")
+        a(href='/') 首页
+        |
+        |
+        a(href='/login') 登录 
+        |
+        |
+        a(href='/register') 注册
